@@ -1,0 +1,7 @@
+{
+  "name": "finwallet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
