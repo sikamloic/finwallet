@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="flex flex-col space-y-3 my-5">
+    <ion-text class="text-2xl font-bold">Sign in to your Account</ion-text>
+    <ion-text class="text-[#6C7278]">Sign in to your Account</ion-text>
+  </div>
+  <form class="space-y-5">
+    <ion-item fill="outline" mode="md" shape="round" color="primary">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item fill="outline" mode="md" shape="round" color="primary">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [type]="password ? 'password':'text'"></ion-input>
+      <ion-icon [name]="password ? 'eye-off-outline':'eye-outline'" slot="end" (click)="password = !password"></ion-icon>
+    </ion-item>
+    <div class="flex justify-end -mt-3">
+      <ion-button fill="clear" class="capitalize" routerLink="/forgot-password">forgot password ?</ion-button>
+    </div>
+    <ion-button size="large" shape="round" expand="full" class="text-white capitalize">log in</ion-button>
+  </form>
+  <div class="space-y-5 mt-5">
+    <div class="flex justify-center">
+      <ion-text class="text-light text-center">Or login with account</ion-text>
+    </div>
+    <ion-row class="text-light">
+      <ion-col size="6">
+        <ion-button shape="round" fill="outline" expand="full" size="large" class="text-light flex items-center space-x-2">
+          <ion-icon src="assets/google.svg"></ion-icon>
+          <ion-text>Google</ion-text>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button shape="round" fill="outline" expand="full" size="large" class="text-light flex items-center space-x-2">
+          <ion-icon src="assets/facebook.svg"></ion-icon>
+          <ion-text>Facebook</ion-text>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer class="flex justify-center space-x-2 items-center ion-padding">
+  <ion-text class="text-light">Dont’t have an account?</ion-text>
+  <ion-button fill="clear" routerLink="/inscription">Register</ion-button>
+</ion-footer>

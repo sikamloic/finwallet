@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <swiper #swiper  [virtual]="true" (slideChange)="onSlideChange($event)">
+    <ng-template swiperSlide>
+      <ion-content class="w-screen h-screen bg-white">
+        <div class="bg-[#269C76] relative rounded-b-[80px] px-5 w-full h-[60%] pt-5 overflow-hidden">
+          <div class="flex justify-between items-center">
+            <ion-button fill="clear">Skip</ion-button>
+            <img src="assets/step1.svg" alt="" class="">
+          </div>
+          <div class="absolute -bottom-5 left-7 right-5 h-[400px] w-[400px]">
+            <img src="assets/onboard_image.svg" alt="" class="w-full">
+          </div>
+        </div>
+        <div class="px-5 flex flex-col space-y-5 h-[30%] mt-10">
+          <ion-text class="text-center font-bold text-3xl">Easy way to Track your financial</ion-text>
+          <ion-text class="text-center text-light font-semibold">All your financial activities will be recorded and displayed briefly and clearly</ion-text>
+          <ion-button expand="full" shape="round" size="large" class="text-white uppercase" (click)="next()">{{title}}</ion-button>
+        </div>
+      </ion-content>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-content class="h-screen w-screen bg-white">
+        <div class="bg-[#269C76] relative rounded-b-[80px] clip px-5 w-full h-[60%] pt-5 overflow-hidden">
+          <div class="flex justify-between items-center">
+            <ion-button fill="clear">Skip</ion-button>
+            <img src="assets/step2.svg" alt="" class="">
+          </div>
+          <div class="absolute -bottom-5 left-7 right-5 h-[400px] w-[400px]">
+            <img src="assets/onboard_image2.svg" alt="" class="w-full">
+          </div>
+        </div>
+        <div class="px-5 flex flex-col space-y-5 h-[30%] mt-10">
+          <ion-text class="text-center font-bold text-3xl">Set your finances for the future</ion-text>
+          <ion-text class="text-center text-light font-semibold">Features that can make it easier for you to save and plan finances in the future</ion-text>
+          <ion-button expand="full" shape="round" size="large" class="text-white uppercase" (click)="next()">{{title}}</ion-button>
+        </div>
+      </ion-content>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-content class="h-screen w-screen bg-white">
+        <div class="bg-[#269C76] relative rounded-b-[80px] px-5 w-full h-[60%] pt-5 overflow-hidden">
+          <div class="flex justify-between items-center">
+            <ion-button fill="clear">Skip</ion-button>
+            <img src="assets/step3.svg" alt="" class="">
+          </div>
+          <div class="absolute -bottom-5 left-7 right-5 h-[400px] w-[400px]">
+            <img src="assets/onboard_image3.svg" alt="" class="w-full">
+          </div>
+        </div>
+        <div class="px-5 flex flex-col space-y-5 h-[30%] mt-10">
+          <ion-text class="text-center font-bold text-3xl">New experience in manage money</ion-text>
+          <ion-text class="text-center text-light font-semibold">Let’s get started and feel a new and fun experience in managing your finances</ion-text>
+          <ion-button expand="full" shape="round" size="large" class="text-white uppercase"  (click)="next()">{{title}}</ion-button>
+        </div>
+      </ion-content>
+    </ng-template>
+  </swiper>
+</ion-content>
